@@ -10,7 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.roomsiswa.ui.theme.RoomSiswaTheme
+import com.example.roomsiswa.navigasi.SiswaApp
+import com.example.roomsiswa.ui.theme.theme.theme.RoomSiswaTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    SiswaApp()
                 }
             }
         }
