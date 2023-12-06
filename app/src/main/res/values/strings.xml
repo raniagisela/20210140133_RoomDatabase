@@ -12,8 +12,8 @@
     <string name="btn_submit">Submit</string>
     <string name="detail_siswa">Detail Siswa</string>
     <string name="edit_siswa">Edit Siswa</string>
-    <string name="Yes">Ya</string>
     <string name="no">Tidak</string>
+    <string name="Yes">Ya</string>
     <string name="delete">Hapus</string>
     <string name="update">Edit</string>
     <string name="attention">Perhatian</string>
