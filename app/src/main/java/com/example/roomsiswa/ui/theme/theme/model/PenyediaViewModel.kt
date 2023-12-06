@@ -1,4 +1,4 @@
-package com.example.roomsiswa.model
+package com.example.roomsiswa.ui.theme.theme.model
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
