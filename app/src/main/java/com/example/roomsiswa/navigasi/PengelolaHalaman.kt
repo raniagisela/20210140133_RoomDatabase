@@ -25,6 +25,8 @@ import com.example.roomsiswa.ui.theme.theme.halaman.DetailsDestination
 import com.example.roomsiswa.ui.theme.theme.halaman.DetailsScreen
 import com.example.roomsiswa.ui.theme.theme.halaman.EntrySiswaScreen
 import com.example.roomsiswa.ui.theme.theme.halaman.HomeScreen
+import com.example.roomsiswa.ui.theme.theme.halaman.ItemEditDestination
+import com.example.roomsiswa.ui.theme.theme.halaman.ItemEditScreen
 
 @Composable
 fun SiswaApp(navController: NavHostController = rememberNavController()){
@@ -44,16 +46,13 @@ fun SiswaTopAppBar(
         modifier = modifier,
         scrollBehavior = scrollBehavior,
         navigationIcon = {
-            if (canNavigateBack){
-                IconButton(onClick = navigateUp) {
-                    Icon(
+            Icon(
                         imageVector = Icons.Filled.ArrowBack,
                         contentDescription = stringResource(id = R.string.back))
                 }
-            }
+            )
         }
-    )
-}
+
 @Composable
 fun HostNavigasi(
     navController: NavHostController,
@@ -88,6 +87,15 @@ fun HostNavigasi(
                     //navController.navigate( "${ItemEditDestination.route}/$it")
                 }
             )
+        }
+        composable(
+            ItemEditDestination.routeWithArgs,
+            arguments = listOf(navArgument(ItemEditDestination.itemIdArgs){
+                type = NavType.IntType
+            })
+        ){
+            ItemEditScreen(navvigateBack = { navController.popBackStack() },
+                onNavigateUp = { navController.navigateUp() })
         }
     }
 }
